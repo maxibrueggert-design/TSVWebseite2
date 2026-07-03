@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>SG Nordangeln – Home</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <div class="topbar">
+    <div class="logo">
+    <img src="img/logo.png" alt="SG Nordangeln Logo" height="65">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="aktuelles.html">Aktuelles</a></li>
+        <li><a href="teams.html">Teams</a></li>
+        <li><a href="turniere.html">Spiele</a></li>
+
+        <li class="dropdown">
+          <a href="#">Verein</a>
+          <div class="dropdown-menu">
+            <a href="verantwortliche.html">Verantwortliche</a>
+            <a href="vereine.html">Vereine der SG</a>
+            <a href="Sportanlagen.html">Sportanlagen</a>
+            <a href="archiv.html">Archiv</a>
+          </div>
+        </li>
+
+        <li class="dropdown">
+          <a href="#">Kontakt</a>
+          <div class="dropdown-menu">
+            <a href="anfahrt.html">Anfahrt</a>
+            <a href="kontakt.html">Kontaktblatt</a>
+          </div>
+        </li>
+
+        <li><a href="links.html">Links</a></li>
+      </ul>
+    </nav>
+    <div class="settings">
+  <button id="settingsBtn" class="settings-btn">⚙ Design</button>
+  <div class="settings-panel" id="settingsPanel">
+    <div class="setting-row">
+      <span>Dark Mode</span>
+      <label class="switch">
+        <input type="checkbox" id="themeToggle">
+        <span class="theme-slider"></span>
+      </label>
+    </div>
+
+    <div class="setting-row">
+      <span>Schriftgröße</span>
+      <select id="fontSizeSelect">
+        <option value="16">Normal</option>
+        <option value="18">Groß</option>
+        <option value="20">Sehr groß</option>
+      </select>
+    </div>
+  </div>
+</div>
+
+  </div>
+</header>
+
+<main class="archive-page">
+  <section class="archive-hero">
+    <div class="slider-container" id="archiveHighlightSlider">
+      <div class="loader">Lade Highlights...</div>
+    </div>
+  </section>
+
+ <section class="filter-section card">
+  <div class="filter-row">
+    <div class="filter-group">
+      <small>Kategorie:</small>
+      <div class="filter-bar">
+        <button data-archive-filter="all" class="btn small active">Alle</button>
+        <button data-archive-filter="Spiele" class="btn small">Spiele</button>
+        <button data-archive-filter="Highlights" class="btn small">Highlights</button>
+        <button data-archive-filter="Feiern" class="btn small">Feiern</button>
+        <button data-archive-filter="Sonstige" class="btn small">Sonstige</button>
+      </div>
+    </div>
+
+    <div class="filter-group">
+  <small>Anzeige-Typ:</small>
+  <div class="type-switcher">
+    <input type="radio" name="typeFilter" id="type-all" value="all" checked>
+    <label for="type-all">Alle</label>
+    <input type="radio" name="typeFilter" id="type-news" value="news">
+    <label for="type-news">News</label>
+    <input type="radio" name="typeFilter" id="type-artikel" value="artikel">
+    <label for="type-artikel">Archiv</label>
+    <div class="switch-selection"></div>
+  </div>
+</div>
+
+<div class="filter-group">
+  <small>Sortierung:</small>
+  <div class="type-switcher sort-switcher">
+    <input type="radio" name="sortOrder" id="sort-desc" value="desc" checked>
+    <label for="sort-desc">Neueste</label>
+    <input type="radio" name="sortOrder" id="sort-asc" value="asc">
+    <label for="sort-asc">Älteste</label>
+    <div class="switch-selection"></div>
+  </div>
+</div>
+</section>
+
+  <div id="archive-grid" class="archive-grid">
+    </div>
+    <div id="detail-modal" class="modal">
+    <div class="modal-overlay"></div>
+    <div class="modal-content">
+        <button class="modal-close-btn">&times;</button>
+        
+        <div class="modal-header">
+            <img id="modal-img" src="" alt="">
+        </div>
+        <div class="modal-body">
+            <span id="modal-date" class="badge"></span>
+            <h2 id="modal-title"></h2>
+            <div id="modal-body-text" class="article-text"></div>
+        </div>
+    </div>
+</div>
+</main>
+
+<footer>
+  © <script>document.write(new Date().getFullYear())</script> SG Nordangeln · <a href="Impressum.txt" target="_blank">Impressum</a> · <a href="Datenschutz.txt" target="_blank">Datenschutz</a>
+</footer>
+
+<script src="js/main.js"></script>
+<button id="scrollTopBtn">▲</button>
+</body>
+</html>

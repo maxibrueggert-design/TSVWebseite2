@@ -1,0 +1,59 @@
+Die monatlichen Hosting-Kosten
+Wie im vorherigen Review besprochen:
+
+Die moderne Google Cloud Lösung (Cloud Run + SQLite/Cloud Storage): ca. 1,00 € bis 3,00 € im Monat (hauptsächlich für den Speicherplatz der Bilder und minimalen Traffic).
+
+(Alternative) Klassisches Shared Hosting (z.B. bei IONOS, Strato, Netcup): ca. 4,00 € bis 8,00 € im Monat (alles inklusive).
+
+Wir gehen für den Plan jetzt den Weg der modernen Google Cloud Architektur.
+
+Dein Masterplan: Schritt-für-Schritt in die Google Cloud
+Hier sind die Meilensteine, die wir gemeinsam abarbeiten müssen. Die Details machen wir, sobald du bei dem jeweiligen Schritt bist.
+
+
+
+
+Phase 1: Vorbereitung des Codes (Lokal)
+
+Datenbank-Migration: Umschreiben der api.php von MySQL auf SQLite (damit wir uns die teure Cloud SQL Datenbank sparen).
+
+Dateipfade anpassen: Die Bild-Uploads in der api.php so umbauen, dass sie in Google Cloud Storage gespeichert werden (Cloud Run Container löschen lokale Dateien bei Inaktivität).
+
+Dockerfile erstellen: Eine kleine Textdatei (Dockerfile) anlegen, die Google sagt, welche PHP-Version und welche Server-Software (z.B. Apache) dein Code benötigt.
+
+
+
+
+Phase 2: Google Cloud Setup
+4.  GCP Konto & Projekt: Einen Google Cloud Account anlegen (falls nicht vorhanden), Zahlungsdaten hinterlegen (für den Free Tier nötig) und ein neues Projekt (z.B. sg-nordangeln-web) erstellen.
+5.  APIs aktivieren: Die benötigten Schnittstellen in der GCP aktivieren (Cloud Run API, Cloud Build API, Cloud Storage API).
+
+
+
+Phase 3: Infrastruktur aufbauen
+6.  Cloud Storage Bucket anlegen: Einen Speicherort in der Cloud für deine SQLite-Datenbankdatei und den Ordner uploads/ (für die Bilder) erstellen.
+7.  Rechte vergeben: Dem zukünftigen Cloud Run Container die Erlaubnis geben, auf diesen Storage-Bucket zuzugreifen (IAM-Rollen).
+
+
+
+Phase 4: Deployment (Das Hochladen)
+8.  Google Cloud CLI installieren: Das Kommandozeilen-Tool von Google auf deinem PC installieren, um deinen Code hochzuladen.
+9.  Container bauen & pushen: Deinen Code mithilfe des Dockerfiles in ein Image verpacken und in die Google Artifact Registry laden.
+10. Cloud Run Service starten: Aus dem hochgeladenen Image deinen Serverless-Container starten und ihm die nötigen Umgebungsvariablen (z.B. Pfad zum Storage Bucket) mitgeben.
+
+
+
+Phase 5: Domain & Live-Gang
+11. Domain verknüpfen: Deine Vereinsdomain (z.B. sg-nordangeln.de) in Google Cloud Run eintragen (Domain Mappings).
+12. DNS-Records setzen: Beim Domain-Anbieter (z.B. INWX, Checkdomain) die von Google bereitgestellten IP-Adressen (A-Records/CNAME) hinterlegen. Google kümmert sich dann automatisch um das kostenlose SSL-Zertifikat.
+
+
+
+
+
+
+
+
+
+
+

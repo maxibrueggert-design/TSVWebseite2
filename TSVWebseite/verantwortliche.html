@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>SG Nordangeln – Home</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .team-section { padding: 2rem 0; text-align: center; }
+    
+    /* Tab-Navigation für Modernität */
+    .tab-nav { margin-bottom: 3rem; display: flex; justify-content: center; gap: 1rem; }
+    .tab-btn { 
+        padding: 0.8rem 2rem; border: none; border-radius: 50px; 
+        background: var(--card); color: var(--text); cursor: pointer; transition: 0.3s;
+        font-weight: bold; box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    .tab-btn.active { background: #0056b3; color: white; }
+
+    /* Grid & Cards */
+    .profile-grid { 
+        display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+        gap: 2rem; padding: 1rem; 
+    }
+    .profile-card {
+        background: var(--card); border-radius: 20px; padding: 2rem;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.05); transition: transform 0.3s;
+        display: flex; flex-direction: column; align-items: center; text-align: center;
+    }
+    .profile-card:hover { transform: translateY(-10px); }
+
+    /* Perfekt zentrierte Buchstaben-Avatare */
+    .avatar-circle {
+        width: 80px; height: 80px; background: linear-gradient(135deg, #0056b3, #00aaff);
+        color: white; border-radius: 50%; font-size: 1.8rem; font-weight: bold;
+        display: flex; align-items: center; justify-content: center; /* Zentrierung */
+        margin-bottom: 1.5rem; border: 4px solid white; box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        text-transform: uppercase;
+    }
+
+    .profile-card h3 { margin: 0.5rem 0; font-size: 1.4rem; }
+    .role-badge { 
+        background: #e1ecf7; color: #0056b3; padding: 0.3rem 1rem; 
+        border-radius: 20px; font-size: 0.85rem; margin-bottom: 1rem; font-weight: 600;
+    }
+    .contact-info { font-size: 0.9rem; color: var(--muted); line-height: 1.6; }
+    
+    .hidden { display: none; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="topbar">
+    <div class="logo">
+    <img src="img/logo.png" alt="SG Nordangeln Logo" height="65">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="aktuelles.html">Aktuelles</a></li>
+        <li><a href="teams.html">Teams</a></li>
+        <li><a href="turniere.html">Spiele</a></li>
+
+        <li class="dropdown">
+          <a href="#">Verein</a>
+          <div class="dropdown-menu">
+            <a href="verantwortliche.html">Verantwortliche</a>
+            <a href="vereine.html">Vereine der SG</a>
+            <a href="Sportanlagen.html">Sportanlagen</a>
+            <a href="archiv.html">Archiv</a>
+          </div>
+        </li>
+
+        <li class="dropdown">
+          <a href="#">Kontakt</a>
+          <div class="dropdown-menu">
+            <a href="anfahrt.html">Anfahrt</a>
+            <a href="kontakt.html">Kontaktblatt</a>
+          </div>
+        </li>
+
+        <li><a href="links.html">Links</a></li>
+      </ul>
+    </nav>
+    <div class="settings">
+  <button id="settingsBtn" class="settings-btn">⚙ Design</button>
+  <div class="settings-panel" id="settingsPanel">
+    <div class="setting-row">
+      <span>Dark Mode</span>
+      <label class="switch">
+        <input type="checkbox" id="themeToggle">
+        <span class="theme-slider"></span>
+      </label>
+    </div>
+
+    <div class="setting-row">
+      <span>Schriftgröße</span>
+      <select id="fontSizeSelect">
+        <option value="16">Normal</option>
+        <option value="18">Groß</option>
+        <option value="20">Sehr groß</option>
+      </select>
+    </div>
+  </div>
+</div>
+
+  </div>
+</header>
+
+<main class="container">
+  <div class="team-section">
+    <h1>Wer wir sind</h1>
+    <p>Die Gesichter hinter der SG Nordangeln</p>
+
+    <div class="tab-nav">
+      <button class="tab-btn active" onclick="showGroup('vorstand', this)">Vorstand</button>
+      <button class="tab-btn" onclick="showGroup('ansprechpartner', this)">Ansprechpartner</button>
+    </div>
+
+    <div id="vorstand" class="profile-grid">
+      <div class="profile-card">
+        <div class="avatar-circle">MJ</div>
+        <div class="role-badge">1. Vorsitzender</div>
+        <h3>Marie Josten</h3>
+        <div class="contact-info">
+          📞 04634-93306<br>
+          ✉️ -
+        </div>
+      </div>
+
+      <div class="profile-card">
+        <div class="avatar-circle">DL</div>
+        <div class="role-badge">Kassenwart</div>
+        <h3>Daniela Lassen</h3>
+        <div class="contact-info">
+          📞 04634-8191<br>
+          ✉️ -
+        </div>
+      </div>
+    </div>
+
+    <div id="ansprechpartner" class="profile-grid hidden">
+      <div class="profile-card">
+        <div class="avatar-circle">MB</div>
+        <div class="role-badge">Jugendobmann</div>
+        <h3>Michael Brüggert</h3>
+        <div class="contact-info">
+          📞 0151-59153907<br>
+          ✉️ -
+        </div>
+      </div>
+
+      <div class="profile-card">
+        <div class="avatar-circle">HS</div>
+        <div class="role-badge">Fußballobmann</div>
+        <h3>Holger Schmidt</h3>
+        <div class="contact-info">
+          📞 0176-70910125<br>
+          ✉️ -
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+
+<footer>
+  © <script>document.write(new Date().getFullYear())</script> SG Nordangeln · <a href="Impressum.txt" target="_blank">Impressum</a> · <a href="Datenschutz.txt" target="_blank">Datenschutz</a>
+</footer>
+<script>
+  // Einfache Logik zum Umschalten der Gruppen
+  function showGroup(groupId, btn) {
+    // Alle Grids verstecken
+    document.getElementById('vorstand').classList.add('hidden');
+    document.getElementById('ansprechpartner').classList.add('hidden');
+    
+    // Gewähltes Grid zeigen
+    document.getElementById(groupId).classList.remove('hidden');
+    
+    // Buttons stylen
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+  }
+</script>
+<script src="js/main.js"></script>
+<button id="scrollTopBtn">▲</button>
+</body>
+</html>

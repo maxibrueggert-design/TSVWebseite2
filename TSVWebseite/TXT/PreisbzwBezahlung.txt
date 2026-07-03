@@ -1,0 +1,23 @@
+Das ist ein wirklich tolles Projekt! Wenn ich mir die Dateien (HTML, CSS, JS, PHP) und die Struktur so ansehe, hast du hier kein einfaches Baukasten-System zusammengeklickt, sondern ein maßgeschneidertes, kleines CMS (Content Management System) von Grund auf selbst gebaut.
+
+Hier ist die ehrliche Einschätzung zu deinem Aufwand, dem Wert der Seite und der konkrete Fahrplan für das Hosting.
+
+Der Arbeitsaufwand: Ein echtes Stück Handwerk
+Was du hier gebaut hast, erfordert ein gutes Verständnis von Full-Stack-Entwicklung. Du hast 15 Seiten strukturiert, ein responsives Design mit CSS-Variablen (sogar Dark Mode!) entworfen, eine JavaScript-gestützte Filter- und Modal-Logik für das Archiv implementiert und obendrein ein eigenes PHP-Backend mit Datenbankanbindung, Login-Schutz und Bild-Upload für den Admin-Bereich geschrieben.
+
+Für Konzeption, Design, Programmierung, Fehlersuche und das finale Polishing gehen bei so einem Projekt schnell 50 bis 100 Arbeitsstunden ins Land. Es ist ein System, das genau auf die SG Nordangeln zugeschnitten ist – ohne den Ballast, den große Systeme wie WordPress oft mitbringen.
+
+Was ist das Projekt wert? (Marktwert vs. Vereinspreis)
+1. Der Wert der Webseite (Einmalkosten für die Erstellung):
+
+Marktwert (Agentur/Freelancer): Wenn ein Sportverein eine Webagentur beauftragen würde, genau dieses System (Custom Frontend, 15 Seiten, Custom Backend CMS) zu entwickeln, läge der Preis in Deutschland realistisch zwischen 3.500 € und 6.000 €.
+
+Vereinspreis: Da du das für deinen eigenen Verein machst, fließt hier natürlich viel Herzblut ein. Oft werden solche Projekte im Verein als Sachspende oder Ehrenamt deklariert. Wenn du eine kleine Anerkennung möchtest, wäre eine Einmalzahlung von 300 € bis 500 € als Aufwandsentschädigung sehr fair und für den Verein immer noch ein absolutes Schnäppchen.
+
+2. Administrator-Vergütung (Laufende Betreuung pro Jahr):
+Als Admin bist du für Updates, Backups, Domain-Verlängerungen, kleine Textänderungen und die Server-Infrastruktur zuständig.
+
+Marktwert: Eine Agentur nimmt für so einen Wartungsvertrag meist zwischen 50 € und 100 € pro Monat (also 600 € bis 1.200 € im Jahr).
+
+Vereinspreis: Im Vereinsumfeld ist die klassische Ehrenamtspauschale (bis zu 840 € im Jahr steuerfrei möglich) ein guter Weg. Realistisch und fair für einen kleinen Verein sind oft 150 € bis 300 € im Jahr für den Webmaster. Alternativ: Der Verein übernimmt deine Mitgliedsbeiträge und du bekommst auf der Jahreshauptversammlung ein dickes Dankeschön und ein Präsentkorb. Verkaufe dich nicht unter Wert, aber halte es für den Verein machbar.
+

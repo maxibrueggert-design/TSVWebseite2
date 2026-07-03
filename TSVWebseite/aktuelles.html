@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>SG Nordangeln – Home</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <div class="topbar">
+    <div class="logo">
+    <img src="img/logo.png" alt="SG Nordangeln Logo" height="65">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="aktuelles.html">Aktuelles</a></li>
+        <li><a href="teams.html">Teams</a></li>
+        <li><a href="turniere.html">Spiele</a></li>
+
+        <li class="dropdown">
+          <a href="#">Verein</a>
+          <div class="dropdown-menu">
+            <a href="verantwortliche.html">Verantwortliche</a>
+            <a href="vereine.html">Vereine der SG</a>
+            <a href="Sportanlagen.html">Sportanlagen</a>
+            <a href="archiv.html">Archiv</a>
+          </div>
+        </li>
+
+        <li class="dropdown">
+          <a href="#">Kontakt</a>
+          <div class="dropdown-menu">
+            <a href="anfahrt.html">Anfahrt</a>
+            <a href="kontakt.html">Kontaktblatt</a>
+          </div>
+        </li>
+
+        <li><a href="links.html">Links</a></li>
+      </ul>
+    </nav>
+    <div class="settings">
+  <button id="settingsBtn" class="settings-btn">⚙ Design</button>
+  <div class="settings-panel" id="settingsPanel">
+    <div class="setting-row">
+      <span>Dark Mode</span>
+      <label class="switch">
+        <input type="checkbox" id="themeToggle">
+        <span class="theme-slider"></span>
+      </label>
+    </div>
+
+    <div class="setting-row">
+      <span>Schriftgröße</span>
+      <select id="fontSizeSelect">
+        <option value="16">Normal</option>
+        <option value="18">Groß</option>
+        <option value="20">Sehr groß</option>
+      </select>
+    </div>
+
+  </div>
+</header>
+
+<main>
+  <section class="page-header">
+    <h1>Aktuelles & News</h1>
+    <p>Bleib auf dem Laufenden rund um die SG Nordangeln.</p>
+  </section>
+
+  <div id="news-container" class="grid"></div>
+
+<div id="news-modal" class="modal">
+    <div class="modal-content">
+        <span class="modal-close">&times;</span>
+        <img id="modal-img" src="" alt="">
+        <div class="modal-body">
+            <h2 id="modal-title"></h2>
+            <p id="modal-desc"></p>
+        </div>
+    </div>
+</div>
+
+</main>
+
+<footer>
+  © <script>document.write(new Date().getFullYear())</script> SG Nordangeln · <a href="Impressum.txt" target="_blank">Impressum</a> · <a href="Datenschutz.txt" target="_blank">Datenschutz</a>
+</footer>
+
+<script src="js/main.js"></script>
+<button id="scrollTopBtn">▲</button>
+</body>
+</html>

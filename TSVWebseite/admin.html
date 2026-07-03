@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>SG Nordangeln – ADMIN</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="admin-body">
+
+<div class="admin-container">
+  <h1 class="admin-header">⚡ Admin Dashboard ⚡</h1>
+
+  <!-- LOGIN -->
+  <div id="login-section" class="admin-card">
+    <h2 style="color:white; text-align:center;">Zugriff verweigert</h2>
+    <input type="password" id="admin-password" class="admin-input" placeholder="Passwort eingeben...">
+    <button onclick="checkLogin()" class="admin-btn">Login</button>
+  </div>
+
+  <!-- DASHBOARD -->
+  <div id="dashboard-section" class="hidden" style="display: none;">
+    
+    <!-- NEUER BEITRAG -->
+    <div class="admin-card">
+      <h2 style="color:#ff3333; margin-top:0;">Neuen Beitrag erstellen</h2>
+      <form id="post-form">
+        <input type="text" id="titel" class="admin-input" placeholder="Titel des Beitrags" required>
+        
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+          <input type="date" id="datum" class="admin-input" required>
+          <select id="typ" class="admin-select">
+            <option value="News">News</option>
+            <option value="Artikel">Artikel (Archiv)</option>
+          </select>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+          <input type="text" id="kategorie" class="admin-input" placeholder="Kategorie (z.B. Spiele)" list="cat-list">
+          <datalist id="cat-list">
+            <option value="Spiele">
+            <option value="Highlights">
+            <option value="Feiern">
+            <option value="Sonstige">
+          </datalist>
+          
+          <select id="format" class="admin-select">
+            <option value="16-9">Format: 16:9 (Standard)</option>
+            <option value="4-3">Format: 4:3</option>
+            <option value="1-1">Format: 1:1 (Quadratisch)</option>
+            <option value="3-4">Format: 3:4 (Hochformat)</option>
+          </select>
+        </div>
+
+        <label class="highlight-toggle">
+          <input type="checkbox" id="ist_highlight" value="1">
+          <div class="toggle-box"></div>
+          <span class="toggle-label">Als Highlight markieren?</span>
+        </label>
+
+        <textarea id="beschreibung" class="admin-textarea" rows="5" placeholder="Inhalt / Beschreibung..."></textarea>
+        
+        <input type="file" id="image-file" class="admin-input" accept="image/*">
+        
+        <button type="submit" class="admin-btn">💾 Beitrag Speichern</button>
+      </form>
+    </div>
+
+    <!-- LISTE -->
+    <div class="admin-card">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
+        <h2 style="color:white; margin:0;">Alle Beiträge</h2>
+        <button onclick="logout()" style="background:#333; color:white; border:none; padding:5px 10px; border-radius:4px; cursor:pointer;">Logout</button>
+      </div>
+      <div id="posts-list"></div>
+    </div>
+
+  </div>
+</div>
+<script src="js/admin.js"></script>
+</body>
+</html>
